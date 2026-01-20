@@ -1,0 +1,26 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h3>Renew Membership — {{ member['name'] }}</h3><br>
+
+    <form method="POST">
+
+        <label>New Start Date</label>
+        <input type="date" name="joined_date" class="form-control"
+               value="{{ member['joined_date'] }}" required>
+
+        <br>
+
+        <label>New End Date</label>
+        <input type="date" name="end_date" class="form-control"
+               value="{{ member['end_date'] }}" required>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">Renew Membership</button>
+        <a href="{{ url_for('view_members') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+{% endblock %}

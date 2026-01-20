@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reminder Status</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .box {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        }
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: #444;
+        }
+        .count {
+            font-size: 22px;
+            margin-top: 10px;
+            color: green;
+        }
+        .btn {
+            margin-top: 25px;
+            display: inline-block;
+            padding: 12px 20px;
+            background: black;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">📤 Reminder Images Sent</div>
+        <div class="count">Successfully sent: {{ count }}</div>
+
+        <a href="/dashboard" class="btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>

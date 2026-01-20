@@ -1,0 +1,38 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+<h3 class="mb-4">Dashboard</h3>
+
+<div class="row g-4">
+  
+  <div class="col-md-3">
+    <div class="card text-center p-3">
+      <h5>Total Members</h5>
+      <h2>{{ total_members }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center p-3">
+      <h5>Active Members</h5>
+      <h2>{{ active_members }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center p-3">
+      <h5>Expired Members</h5>
+      <h2>{{ expired_members }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-center p-3">
+      <h5>Expiring Soon (4 Days)</h5>
+      <h2>{{ expiring_soon }}</h2>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

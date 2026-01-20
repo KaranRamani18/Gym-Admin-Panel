@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Virtual env
+venv/
+
+# Build / executable folders
+build/
+dist/
+*.spec
+
+# Database (local)
+gym.db
+
+# IDE
+.vscode/
+.idea/

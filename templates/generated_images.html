@@ -1,0 +1,39 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+    <h3 class="mb-3">Generated Reminder Images</h3>
+
+    {% if files %}
+
+      <div class="row">
+        {% for f in files %}
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img src="{{ url_for('static', filename='generated/' ~ f.file) }}" 
+                   class="card-img-top" style="border-radius: 8px;">
+
+              <div class="card-body">
+                <h5 class="card-title">{{ f.name }}</h5>
+                <p class="card-text">
+                  Expiry: <strong>{{ f.end_date }}</strong>
+                </p>
+
+                <a href="{{ url_for('static', filename='generated/' ~ f.file) }}" 
+                   class="btn btn-success w-100" download>
+                  Download Image
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    {% else %}
+      <p class="text-muted">No images generated.</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
