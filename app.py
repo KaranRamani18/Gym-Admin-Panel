@@ -612,13 +612,5 @@ def renew_member(id):
 # =====================================================
 # START FLASK (AUTO BROWSER OPEN)
 # =====================================================
-if __name__ == "__main__":
-    # Open browser automatically after server starts
-    def open_browser():
-        webbrowser.open("http://127.0.0.1:5000/login")   # direct to admin login page
 
-    # Delay to ensure Flask starts first
-    threading.Timer(2.0, open_browser).start()
-
-    app.run(host="127.0.0.1", port=5000, debug=False)
 
